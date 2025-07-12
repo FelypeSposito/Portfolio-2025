@@ -1,86 +1,156 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&family=Pacifico&display=swap');
-
-
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
+/* Primeiro container */
 #container1 {
-    width: 100vw;
+    width: 100%;
     height: 85vh;
-    background-image: url('Assets/IMG/IMG_9707.JPG');
+    background-image: url('Assets/IMG/backgroundContainer1.JPG');
     background-size: cover;
     background-position: center;
 }
 
-#navGeralHeader{
+/* Header */
+#navGeralHeader {
     height: 15vh;
     background-color: #040a05c4;
     display: grid;
     grid-template-columns: 20% 80%;
     align-items: center;
     justify-items: center;
+    gap: 12.5vw;
 }
 
-#navGeralHeader #imgGit{
+#navGeralHeader #imgGit {
     align-self: center;
     justify-self: center;
     text-decoration: none;
 }
 
-#navHeader{
- display: flex;
+#navHeader {
+    display: flex;
     gap: 5vw;
-    padding-left: 25vw;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#navHeader li a{
+#navHeader li a {
     color: white;
     font-size: larger;
-    font-family: 'julius sans one', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     text-decoration: none;
 }
 
-#navHeader li::marker{
+#navHeader li::marker {
     color: white;
-    font-family: 'julius sans one', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     text-decoration: none;
 }
 
-#contentNomeInicial{
+/* Conteúdo central do primeiro container */
+#contentNomeInicial {
     height: 70vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: end;
 }
 
-#nomeInicioDiv{
+#nomeInicioDiv {
     height: 15vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
 }
 
-#nomeInicioTexto{
+#nomeInicioTexto {
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-family: 'pacifico', cursive;
+    font-family: 'Pacifico', cursive;
     font-weight: 400;
 }
 
-
-#barraDivisoriaCinza{
-    height: 1vh;
-    background-color: #B3B3B3;
+/* Barra separadora */
+.barraSeparadora {
+    height: 1.5vh;
+    background-color: #D9D9D9;
 }
 
+/* Segundo container */
+#container2 {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    background-image: url('Assets/IMG/backgroundContainer2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+#contDivBarraBranca {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+}
+
+#barraBranca1 {
+    height: 38%;
+    width: 35%;
+    background-color: white;
+}
+
+#barraBranca2 {
+    height: 38%;
+    width: 60%;
+    background-color: white;
+}
+
+#tituloBarraBranca1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    padding-right: 15%;
+}
+
+#contDivBarraFoto{
+    height: 8vh;
+    background-image: url('Assets/IMG/backgroundGatoEspelhado.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#titulocontDivBarra1{
+    height: 100%;
+    padding-left: 12.5%;
+}
+
+#titulocontDivBarra1 p{
+    font-family: 'pacifico', cursive;
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+}
