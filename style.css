@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&family=Pacifico&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#container1 {
+    width: 100vw;
+    height: 85vh;
+    background-image: url('Assets/IMG/IMG_9707.JPG');
+    background-size: cover;
+    background-position: center;
+}
+
+#navGeralHeader{
+    height: 15vh;
+    background-color: #040a05c4;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    justify-items: center;
+}
+
+#navGeralHeader #imgGit{
+    align-self: center;
+    justify-self: center;
+    text-decoration: none;
+}
+
+#navHeader{
+ display: flex;
+    gap: 5vw;
+    padding-left: 25vw;
+}
+
+#navHeader li a{
+    color: white;
+    font-size: larger;
+    font-family: 'julius sans one', sans-serif;
+    text-decoration: none;
+}
+
+#navHeader li::marker{
+    color: white;
+    font-family: 'julius sans one', sans-serif;
+    text-decoration: none;
+}
+
+#contentNomeInicial{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    align-items: end;
+}
+
+#nomeInicioDiv{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+}
+
+#nomeInicioTexto{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'pacifico', cursive;
+    font-weight: 400;
+}
+
+
+#barraDivisoriaCinza{
+    height: 1vh;
+    background-color: #B3B3B3;
+}
+
