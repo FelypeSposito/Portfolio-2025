@@ -328,6 +328,107 @@ justify-content: center;
 
 
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Julius Sans One', sans-serif;
+      background-color: #111;
+      color: #000;
+      padding: 2rem;
+    }
+
+    .galeria-wrapper {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 60%;
+      transition: all 0.4s ease;
+      align-items: flex-start;
+    }
+
+    .item {
+      position: relative;
+      flex: 1;
+      max-width: 180px;
+      aspect-ratio: 1 / 1; /* quadrado inicialmente */
+      transition: all 0.4s ease;
+      cursor: pointer;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+    }
+
+    .texto-explicativo {
+      flex: 1;
+      background: white;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      max-width: 35%;
+      height: fit-content;
+    }
+
+    .galeria-wrapper.hovering .container .item {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.95);
+    }
+
+    .galeria-wrapper.hovering .container .item:hover {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 5;
+      max-width: 100%;
+      aspect-ratio: 3 / 2; /* estica horizontalmente */
+      transform: scale(1.05);
+    }
+
+    .galeria-wrapper.hovering .container .item:hover img {
+      border-radius: 8px;
+    }
+
+    .galeria-wrapper.hovering .texto-explicativo {
+      opacity: 1;
+    }
+
+    .texto-explicativo .texto {
+      display: none;
+    }
+
+    .texto-explicativo[data-ativo="1"] #texto1,
+    .texto-explicativo[data-ativo="2"] #texto2,
+    .texto-explicativo[data-ativo="3"] #texto3,
+    .texto-explicativo[data-ativo="4"] #texto4 {
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .galeria-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container, .texto-explicativo {
+        max-width: 100%;
+      }
+    }
 
 
 
