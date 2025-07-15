@@ -327,18 +327,20 @@ justify-content: center;
 
 
 
+#comparadorOficial{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+
+}
+
 
     * {
       box-sizing: border-box;
       margin: 0;
     }
 
-    body {
-      font-family: 'Julius Sans One', sans-serif;
-      background-color: #111;
-      color: #000;
-      padding: 2rem;
-    }
+
 
     .galeria-wrapper {
       display: flex;
@@ -352,7 +354,7 @@ justify-content: center;
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      max-width: 60%;
+      max-width: 75%;
       transition: all 0.4s ease;
       align-items: flex-start;
     }
@@ -362,7 +364,7 @@ justify-content: center;
       flex: 1;
       max-width: 180px;
       aspect-ratio: 1 / 1; /* quadrado inicialmente */
-      transition: all 0.4s ease;
+      transition: all 1s ease;
       cursor: pointer;
       z-index: 1;
       overflow: hidden;
@@ -372,7 +374,7 @@ justify-content: center;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all 0.4s ease;
+      transition: all 1s ease;
     }
 
     .texto-explicativo {
@@ -396,12 +398,10 @@ justify-content: center;
       pointer-events: auto;
       z-index: 5;
       max-width: 100%;
-      aspect-ratio: 3 / 2; /* estica horizontalmente */
-      transform: scale(1.05);
+      aspect-ratio: 3 / 3; /* estica horizontalmente */
     }
 
     .galeria-wrapper.hovering .container .item:hover img {
-      border-radius: 8px;
     }
 
     .galeria-wrapper.hovering .texto-explicativo {
