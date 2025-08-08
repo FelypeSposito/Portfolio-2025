@@ -78,6 +78,38 @@ sections.forEach(section => {
       } else {
         console.error('#BGcont1 não encontrado');
       }
-    }, 500);
+    }, 6500);
   });
+
+
+
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  const conteudo = document.getElementById('conteudo');
+
+  if (localStorage.getItem('pageLoaded') === 'true') {
+    // Usuário já carregou a página antes, pula loader
+    loader.style.display = 'none';
+    conteudo.style.display = 'block';
+  } else {
+    // Primeira vez: mostra loader por 5s e depois esconde
+    setTimeout(() => {
+      loader.classList.add('fade-out');
+      loader.addEventListener('transitionend', () => {
+        loader.style.display = 'none';
+        conteudo.style.display = 'block';
+
+        // Marca no localStorage que já carregou
+        localStorage.setItem('pageLoaded', 'true');
+      }, { once: true });
+    }, 6000);
+  }
+});
+
+
+
+
+
+
+
 

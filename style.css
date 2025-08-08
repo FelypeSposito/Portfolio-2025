@@ -34,6 +34,104 @@ body{
   filter: blur(0); 
 }
 
+ #loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #040a05c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+
+  #loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #040a05;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    filter: contrast(20);
+  }
+
+
+  #textoLoader{
+    color: white;
+    font-family: quicksand;
+    font-size: 2.5rem;
+    text-align: center;
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    padding-bottom: 7%;
+    
+  }
+
+  /* Quando sumir, opacidade zero */
+  #loader.fade-out {
+    opacity: 0;
+  }
+
+  .gooey {
+    width: 142px;
+    height: 40px;
+    position: relative;
+  }
+
+  .gooey .dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    left: 15px;
+    filter: blur(4px);
+    background: #ffffff;
+    border-radius: 50%;
+    animation: dot 2.8s infinite;
+  }
+
+  .gooey .dots {
+    margin-top: 12px;
+    margin-left: 31px;
+    animation: dots 2.8s infinite;
+    transform: translateX(0);
+  }
+
+  .gooey .dots span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    filter: blur(4px);
+    background: #ffffff;
+    border-radius: 50%;
+  }
+
+  @keyframes dot {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(96px); }
+  }
+
+  @keyframes dots {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-31px); }
+  }
+
+  /* Conteúdo escondido inicialmente */
+  #conteudo {
+    display: none;
+  }
+
+
+
+
 
 /* Primeiro container */
 #container1 {
@@ -54,7 +152,7 @@ body{
     box-sizing: border-box;
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 998;
     transition: all 1s ease-in-out;
     list-style: none;
     top: 0;
@@ -559,7 +657,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   background-image: url('Assets/IMG/olhosAmorPBDSK.jpg');
   background-size: cover;
   background-position: center;
-  transition: flex-grow 4.5s cubic-bezier(.24,.54,1,.79), border-radius 1.8s ease;
+  transition: flex-grow 2s ease, border-radius 1s ease;
 }
 
 #grow1C3:hover {
@@ -807,15 +905,15 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 
 #textoPrincipalContainer4 h1{
   color: white;
-  font-family: 'pacifico', cursive;
+  font-family: julius sans one, sans-serif;
   font-size: 2.5em;
 }
 
 #textoPrincipalContainer4 p{
   color: white;
-  font-family: 'righteous', cursive;
-  padding: 2%;
-  font-size: 1.8em;
+  font-family: quicksand, sans-serif;
+  padding: 4%;
+  font-size: 1.5em;
 }
 
 
@@ -1019,8 +1117,9 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1e1e1e;
+  background-color: #1e1e1e32;
 }
+
 
 #footer {
   position: relative; /* importante para conter os absolutos */
@@ -1041,11 +1140,10 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   background-position: center;
   z-index: 0;
   transition: all 1s ease;
-  filter: blur(1px);
 }
 
 #footer:hover #BGfooter{
-  filter: blur(10px);
+  filter: blur(6px);
 }
 
 /* Conteúdo por cima */
