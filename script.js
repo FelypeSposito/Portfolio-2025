@@ -48,3 +48,22 @@
       }
     });
   });
+
+
+  const sections = document.querySelectorAll('.fade-in-section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Anima apenas uma vez
+    }
+  });
+}, {
+  threshold: 0.15 // Começa a animar quando 20% estiver visível
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
