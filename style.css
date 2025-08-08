@@ -39,7 +39,6 @@ body{
 #container1 {
     width: 100%;
     height: 85vh;
-    background-image: url('Assets/IMG/backgroundContainer1.JPG');
     background-size: cover;
     background-position: center;
 }
@@ -56,11 +55,14 @@ body{
     width: 100%;
     position: fixed;
     z-index: 1000;
-    transition: background-color 2s ease;
+    transition: all 1s ease-in-out;
+    list-style: none;
+    top: 0;
 }
 
 #navGeralHeader:hover{
-    background-color: #040a05f0;
+  backdrop-filter: blur(7px);
+    background-color: #040a05dd;
 }
 
 #navGeralHeader #imgGit {
@@ -77,10 +79,12 @@ body{
     grid-column: 3;
 }
 
+
 #navHeader li a {
     color: white;
     font-size: larger;
     font-family: 'Julius Sans One', sans-serif;
+    font-size: 1em;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.5s ease;
@@ -97,15 +101,28 @@ body{
 }
 
 /* Conteúdo central do primeiro container */
-#contentNomeInicial {
+#BGcont1 {
     height: 85vh;
     width: 100%;
     display: flex;
     align-items: end;
+    position: relative;
+    z-index: 1;
+    background-image: url('Assets/IMG/laguinhoDeFora1xDSK.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: blur(6px);
+    transition: all 1.5s ease
+    
 }
 
+  #BGcont1.blur-off {
+    filter: blur(0);
+  }
+
+
 #nomeInicioDiv {
-    height: 15vh;
+    height: 100%;
     width: 100%;
     display: flex;
 }
@@ -119,6 +136,10 @@ body{
     color: white;
     font-family: 'Pacifico', cursive;
     font-weight: 400;
+    position: relative;
+    z-index: 10;
+    align-self: flex-end;
+    padding-bottom: 5%;
 }
 
 /* Barra separadora */
@@ -517,7 +538,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #grow2C3{
   height: 100%;
   flex-basis: 15%;
-  background-image: url('Assets/IMG/areiaMobile.jpg');
+  background-image: url('Assets/IMG/RoofTopHorizontal.JPG');
   background-size: cover;
   background-position: center;
   transition: all 1.3s ease;
@@ -538,7 +559,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   background-image: url('Assets/IMG/olhosAmorPBDSK.jpg');
   background-size: cover;
   background-position: center;
-  transition: flex-grow 4.5s ease, border-radius 1.8s ease;
+  transition: flex-grow 4.5s cubic-bezier(.24,.54,1,.79), border-radius 1.8s ease;
 }
 
 #grow1C3:hover {
@@ -577,8 +598,9 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   display: flex;
   align-self: center;
   justify-self: center;
-  background: #CECECE;
+  background: #ffffff12;
   font-family: julius sans one, sans-serif;
+  color: white;
 }
 
 #tituloBoxpt2GrowC3{
@@ -588,7 +610,6 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: underline 1px #1e1e1e;
 }
 
 
@@ -1001,40 +1022,68 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   background-color: #1e1e1e;
 }
 
-#footer{
+#footer {
+  position: relative; /* importante para conter os absolutos */
   height: 60vh;
   width: 100%;
-  background-image: url('Assets/IMG/rioPira.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
   transition: background-image 1s ease;
+  overflow: hidden; /* esconde possíveis excessos do blur */
 }
 
-#footer:hover{
-  background-image: url('Assets/IMG/rioPB3.jpg');
+#BGfooter {
+  position: absolute;
+  inset: 0; /* ocupa tudo */
+  background-image: url('Assets/IMG/cachoeiraFriaDSK.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: all 1s ease;
+  filter: blur(1px);
 }
 
+#footer:hover #BGfooter{
+  filter: blur(10px);
+}
 
-#div1Footer{
+/* Conteúdo por cima */
+#conteudoFooter {
+  position: relative;
+  display: flex;
+  width: 100%;
   height: 100%;
-  width: 35%;
+  z-index: 1; /* fica acima do fundo borrado */
+}
+
+/* seus estilos para div1Footer, div2Footer, div3Footer continuam iguais */
+#div1Footer{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+}
+
+
+#div1Footer {
+  width: 35%;
   padding-right: 10%;
 }
 
-#opcoesFooter1{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#div2Footer {
+  width: 30%;
 }
 
-#opcoesFooter1 ul li a{
+#div3Footer {
+  width: 35%;
+}
+
+#opcoesFooter1 ul {
   list-style: none;
+}
+
+#opcoesFooter1 ul li a {
   color: white;
   font-size: 3rem;
   font-family: 'six caps', sans-serif;
@@ -1042,31 +1091,19 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   transition: color 0.5s ease;
 }
 
-#opcoesFooter1 ul li a:hover{
-  color: rgb(74, 74, 74);
-  }
+#opcoesFooter1 ul li a:hover {
+  color: rgb(0, 0, 0);
+}
 
-
-#div2Footer{
-  height: 100%;
-  width: 30%;
+#logoFinalFooter {
   display: flex;
-  align-items: center;
+  align-items: end;
+  padding-bottom: 10%;
   justify-content: center;
-}
-
-
-#logoFinalFooter{
   height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-rows: 70% 30%;
-  align-items: center;
-  justify-content: center;
 }
 
-#logoFinalFooter a{
-  grid-row: 2;
+#logoFinalFooter a {
   text-decoration: none;
   font-family: 'pacifico', cursive;
   color: white;
@@ -1074,17 +1111,13 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   transition: color 0.8s ease;
 }
 
-#logoFinalFooter a:hover{
+#logoFinalFooter a:hover {
   color: black;
 }
 
-#div3Footer{
-  height: 100%;
-  width: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+/* Resto dos seus estilos para os links etc continuam os mesmos */
+
 
 
     * {

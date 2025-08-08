@@ -60,10 +60,24 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.15 // Começa a animar quando 20% estiver visível
+  threshold: 0.15 // Começa a animar quando 15% estiver visível
 });
 
 sections.forEach(section => {
   observer.observe(section);
 });
+
+
+
+
+ window.addEventListener('load', () => {
+    setTimeout(() => {
+      const el = document.getElementById('BGcont1');
+      if(el) {
+        el.classList.add('blur-off');
+      } else {
+        console.error('#BGcont1 não encontrado');
+      }
+    }, 500);
+  });
 
