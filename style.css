@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&family=Pacifico&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&family=Mea+Culpa&family=Pacifico&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&family=Mea+Culpa&family=Pacifico&family=Righteous&family=Six+Caps&display=swap');
 
 
 * {
@@ -26,11 +27,18 @@
     height: 15vh;
     background-color: #040a05c4;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 20% 60%;
     align-items: center;
     justify-items: center;
     box-sizing: border-box;
-    width: 100;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: background-color 2s ease;
+}
+
+#navGeralHeader:hover{
+    background-color: #040a05f0;
 }
 
 #navGeralHeader #imgGit {
@@ -44,6 +52,7 @@
     gap: 5vw;
     justify-content: center;
     flex-wrap: wrap;
+    grid-column: 3;
 }
 
 #navHeader li a {
@@ -61,7 +70,7 @@
 
 /* Conteúdo central do primeiro container */
 #contentNomeInicial {
-    height: 70vh;
+    height: 85vh;
     width: 100%;
     display: flex;
     align-items: end;
@@ -361,7 +370,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #Background1Container3{
   height: 65%;
   width: 100%;
-  background-image: url('Assets/IMG/RoofTopHorizontal.JPG');
+  background-image: url('Assets/IMG/laguinhoDeFora1xDSK.jpg');
   background-size: cover;
   background-position-y: center;
   position: relative; 
@@ -372,7 +381,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #Background2Container3{
   height: 36%;
   width: 100%;
-  background-image: url('Assets/IMG/bgPlantaGAMARO.jpg');
+  background-image: url('Assets/IMG/cachoeiraFriaDSK.jpg');
   background-size: cover;
   background-position-y: 60%;
   position: relative; 
@@ -395,12 +404,14 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 }
 
 #linha1Cnt1C3{
-  background-color: white;
+  background-color: #FFFFFF75;
   height: 60%;
   align-self: center;
   width: 25%;
   justify-self: right;
   align-content: center;
+  border-radius: 20px 0px 0px 20px;
+  transition: all 0.7s ease;
 }
 
 #linha1Cnt1C3 p{
@@ -412,12 +423,14 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 }
 
 #linha2Cnt1C3{
-  background-color: white;
+  background-color: #FFFFFF75;
   height: 60%;
   align-self: center;
   width: 15%;
   justify-self: right;
   align-content: center;
+  border-radius: 20px 0px 0px 20px;
+  transition: all 0.7s ease;
 }
 
 #linha2Cnt1C3 p{
@@ -451,12 +464,13 @@ grid-template-rows:  33.3% 33.3% 33.3%;
   align-self: center;
   justify-self: center;
   padding-top: 20%;
+  color: white;
 }
 
 #grow1C3{
   height: 100%;
   flex-basis: 25%;
-  background-image: url('Assets/IMG/backgroundContainer2.jpg');
+  background-image: url('Assets/IMG/laguinhoDSK.PNG');
   background-size: cover;
   background-position: center;
   transition: all 2s ease;
@@ -465,7 +479,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #grow2C3{
   height: 100%;
   flex-basis: 15%;
-  background-image: url('Assets/IMG/backgroundContainer1.JPG');
+  background-image: url('Assets/IMG/areiaMobile.jpg');
   background-size: cover;
   background-position: center;
   transition: all 1.3s ease;
@@ -474,7 +488,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #grow3C3{
   height: 100%;
   flex-basis: 12.5%;
-  background-image: url('Assets/IMG/bgGato.jpg');
+  background-image: url('Assets/IMG/gamaroDSK.jpg');
   background-size: cover;
   background-position: center;
   transition: all 1s ease;
@@ -483,15 +497,15 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #grow4C3{
   height: 100%;
   flex-basis: 35%;
-  background-color: white;
+  background-image: url('Assets/IMG/olhosAmorPBDSK.jpg');
   background-size: cover;
   background-position: center;
-  transition: flex-grow 2.5s ease, border-radius 1s ease;
+  transition: flex-grow 4.5s ease, border-radius 1.8s ease;
 }
 
 #grow1C3:hover {
   flex-grow: 3;
-  border-radius: 5% 0% 0% 5%;
+  border-radius: 15% 0% 0% 15%;
 }
 
 #grow2C3:hover {
@@ -550,18 +564,24 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 }
 
 #barraBranca3C3{
-  background-color: white;
+  background-color: #FFFFFF75;
   z-index: 6;
   position: absolute;
   height: 20%; 
   width: 100%;
   align-self: flex-end;
   display: flex;
+  border-radius: 0% 20px 20px 0%;
+  transition: all 0.7s ease;
+}
+
+#barraBranca3C3:hover, #linha2Cnt1C3:hover, #linha1Cnt1C3:hover{
+  background-color: #FFFFFF;
 }
 
 #barraBranca3C3 p{
   font-family: julius sans one, sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-left: 5%;
   color: black;
   text-align: left;
@@ -757,9 +777,271 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 }
 
 
+#container5 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#BGcontainer5{
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 7.5% 25% 5% 35% 5% 15% 7.5%; ;
+  grid-template-columns: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('Assets/IMG/gamaroDSK.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+#BG1Container5{
+  height: 100%;
+  width: 35%;
+  background-image: url('Assets/IMG/rioPira.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 6;
+}
+
+#divTituloWebDesign{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20% 30% 30% 20%;
+  grid-template-columns: 10% 80%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+#andar1WebDesign{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  color: white;
+  font-family: julius sans one, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#andar2WebDesign{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  color: white;
+  font-family: julius sans one, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  grid-row: 3;
+  grid-column: 2;
+}
+
+#barraBrancaWebDesign{
+  height: 6%;
+  width: 80%;
+  display: flex;
+  z-index: 5;
+  grid-row: 4;
+  grid-column: 2;
+  background-color: white;
+  align-self: flex-start;
+}
+
+#BG2Container5{
+  height: 100%;
+  width: 93%;  
+  background-image: url('Assets/IMG/bgPBclaro.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+#divTextoWebDesign{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5% 60% 35%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+#divTextoWebDesign p{
+  grid-column: 2;
+  font-size: 2.5rem;
+  font-family: 'pacifico', cursive;
+  color: white;
+}
+
+#BG3Container5{
+  height: 100%;
+  width: 100%;
+  background-image: url('Assets/IMG/backgroundGatoEspelhado.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+#orgMarcaBravetaCont5{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 7.5% 80% 12.5%;
+  position: relative;
+  z-index: 5;
+}
+
+#BG3Container5 p{
+  font-family: righteous, cursive;
+  font-size: 3rem;
+  color: #ffffff85;
+  grid-column: 2;
+  align-self: center;
+}
+
+#bravetaDSKcont{
+  height: 12.5vh;
+  background-image: url('Assets/IMG/bgGato.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-columns: 100%;
+}
+
+#barrinhaBravetaDSK{
+  height: 15%;
+  width: 25%;
+  background-color: white;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+#bravetaDSKcont p{
+  grid-row: 2;
+  font-family: righteous, cursive;
+  font-size: 3rem;
+  font-family: 'six caps', sans-serif;
+  color: #FFFFFF;
+  align-self: center;
+  justify-self: center;
+}
+
+#containerDSKBraveta{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+
+#footer{
+  height: 60vh;
+  width: 100%;
+  background-image: url('Assets/IMG/rioPira.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  transition: background-image 1s ease;
+}
+
+#footer:hover{
+  background-image: url('Assets/IMG/rioPB3.jpg');
+}
 
 
+#div1Footer{
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#opcoesFooter1{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#opcoesFooter1 ul li a{
+  list-style: none;
+  color: white;
+  font-size: 3rem;
+  font-family: 'six caps', sans-serif;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+#opcoesFooter1 ul li a:hover{
+  color: rgb(74, 74, 74);
+  }
+
+
+#div2Footer{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#logoFinalFooter{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+#logoFinalFooter a{
+  grid-row: 2;
+  text-decoration: none;
+  font-family: 'pacifico', cursive;
+  color: white;
+  font-size: 2rem;
+  transition: color 0.8s ease;
+}
+
+#logoFinalFooter a:hover{
+  color: black;
+}
+
+#div3Footer{
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
     * {
