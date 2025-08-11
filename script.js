@@ -99,7 +99,7 @@ const Observer50 = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.40
+  threshold: 0.30
 });
 
 targets50.forEach(el => {
@@ -118,7 +118,7 @@ targets50.forEach(el => {
       } else {
         console.error('#BGcont1 não encontrado');
       }
-    }, 100);
+    }, 6500);
   });
 
 //BLUR CONT1
