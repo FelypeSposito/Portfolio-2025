@@ -69,6 +69,46 @@ sections.forEach(section => {
 
 
 
+const targetsColor = document.querySelectorAll('.color-in-section');
+
+const colorObserver = new IntersectionObserver((entries) => {
+  entries.forEach(item => {
+    if (item.isIntersecting) {
+      item.target.classList.add('colored');
+      colorObserver.unobserve(item.target); // Só anima uma vez
+    }
+  });
+}, {
+  threshold: 0.20
+});
+
+targetsColor.forEach(el => {
+  colorObserver.observe(el);
+});
+
+
+
+
+const targets50 = document.querySelectorAll('.fade-in-section-50');
+
+const Observer50 = new IntersectionObserver((entries) => {
+  entries.forEach(item => {
+    if (item.isIntersecting) {
+      item.target.classList.add('blur-50');
+      Observer50.unobserve(item.target); // Só anima uma vez
+    }
+  });
+}, {
+  threshold: 0.40
+});
+
+targets50.forEach(el => {
+  Observer50.observe(el);
+});
+
+
+
+
 
  window.addEventListener('load', () => {
     setTimeout(() => {
@@ -78,10 +118,10 @@ sections.forEach(section => {
       } else {
         console.error('#BGcont1 não encontrado');
       }
-    }, 6500);
+    }, 100);
   });
 
-
+//BLUR CONT1
 
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
@@ -106,6 +146,7 @@ window.addEventListener('load', () => {
   }
 });
 
+//LOADER
 
 
 

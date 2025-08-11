@@ -34,6 +34,29 @@ body{
   filter: blur(0); 
 }
 
+.color-in-section{
+  filter: saturate(0);
+  filter: blur(8px);
+  transition: all 1.5s ease;
+}
+
+.color-in-section.colored{
+  filter: saturate(1);
+  filter: blur(0);
+}
+
+.fade-in-section-50{
+  filter: saturate(0);
+  filter: blur(8px);
+  transition: filter 2s ease-out;
+}
+
+.fade-in-section-50.blur-50{
+  filter: blur(0);
+  filter: saturate(1);
+}
+
+
  #loader {
     position: fixed;
     top: 0; left: 0;
@@ -232,8 +255,8 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
-    font-family: 'Pacifico', cursive;
-    font-weight: 400;
+  font-family: quicksand, sans-serif;
+  font-weight: 600;
     position: relative;
     z-index: 10;
     align-self: flex-end;
@@ -967,7 +990,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #BG2Amostra {
   height: 100%;
   width: 60%;
-  background-image: url('Assets/IMG/vidroQuebrado.JPG');
+  background-image: url('Assets/IMG/vidroPBDSK.JPG');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -986,7 +1009,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #fotoHorizontalContAmostra{
   height: 65%;
   width: 55%;
-  background-image: url('Assets/IMG/pontaPredioBrooklin.JPG');
+  background-image: url('Assets/IMG/cachoeiraFriaDSK.jpg');
   background-position: center;  
   background-size: cover;
   align-self: flex-center;
@@ -1170,14 +1193,155 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 }
 
 #containerDSKBraveta{
-  height: 100vh;
+  height: 110vh;
   width: 100%;
+  display: flex;
+  background-image: url('Assets/IMG/backgroundContainer2.jpg');
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 15vh 5vh 85vh 5vh ;
+  grid-template-columns: 100%;
+}
+
+#headerDSKBraveta{
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  background-color: #151b16c5;
+  position: absolute;
+  z-index: 999;
+}
+
+#logoDSKBraveta{
+  height: 100%;
+  width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1e1e1e32;
+  font-family: righteous, cursive;
+  font-size: 3rem;
+  color: white;
+  margin-left: 5%;
 }
 
+#itensHeaderDSKBraveta{
+  display: flex;
+  color: white;
+  font-family: pacifico, cursive;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 3%;
+  margin-right: 5%;
+}
+
+#item1DSKBraveta, #item2DSKBraveta, #item3DSKBraveta, #item4DSKBraveta, #item5DSKBraveta {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #EEFFC1;
+  transition: color 0.5s ease;
+}
+
+#filtroEscuroBG{
+  background-color: #0b0f0b90;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-rows: 15vh 5vh 85vh;
+  grid-template-columns: 5% 90% 5%;
+}
+
+
+#Cont1DSKBraveta{
+  grid-row: 3;
+  grid-column: 2;
+  width: 100%;
+  height: 55%;
+  background-color: #0b0f0b94;
+  padding-left: 7.5%;
+  padding-top: 4%;
+}
+
+#tituloDSKBraveta{
+  display: flexbox;
+}
+
+#titulo1DSKBraveta{
+  font-family: righteous, cursive;
+  font-size: 2.5rem;
+  color: #EEFFC1;
+}
+
+#titulo2DSKBraveta{
+  font-family: righteous, cursive;
+  font-size: 3.2rem;
+  color: #EEFFC1;
+}
+
+#barraVerdeDSKBraveta{
+  width: 50%;
+  height: 3vh;
+  background-color: #191B0E;
+  margin-top: 3%;
+}
+
+#textoDSKBraveta{
+  font-family: pacifico, cursive;
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 50%;
+}
+
+
+#Cont2DSKBraveta{
+  grid-row: 3;
+  grid-column: 2;
+  height: 45%;
+  align-self: flex-end;
+  display: block;
+}
+
+#divbotaoInferiorDSKBraveta{
+  width: 92.5%;
+  height: 7.5vh;
+  display: flex;
+  margin-left: 7.5%;
+  margin-top: 1%;
+}
+
+
+#barraVerdeInferiorDSKBraveta{
+  width: 25%;
+  height: 3vh;
+  margin-top: 2%;
+  background-color: #191B0E;
+  display: flex;
+  margin-left: 7.5%;
+}
+
+#delimitacaoBotaoDSKBraveta{
+  width: 11.5%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191B0E;
+  align-self: center;
+}
+
+#delimitacaoBotaoDSKBraveta p{
+  color: #EEFFC1;
+  font-family: six caps, sans-serif;
+  font-size: 2rem;
+}
+
+#barraSeparadorafooter{
+  height: 4px;
+  background-color: #D9D9D9;
+}
 
 #footer {
   position: relative; /* importante para conter os absolutos */
@@ -1193,7 +1357,7 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 #BGfooter {
   position: absolute;
   inset: 0; /* ocupa tudo */
-  background-image: url('Assets/IMG/cachoeiraFriaDSK.jpg');
+  background-image: url('Assets/IMG/ceuDSK.JPG');
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -1261,7 +1425,8 @@ grid-template-rows:  33.3% 33.3% 33.3%;
 
 #logoFinalFooter a {
   text-decoration: none;
-  font-family: 'pacifico', cursive;
+  font-family: quicksand, sans-serif;
+  font-weight: 500;
   color: white;
   font-size: 2rem;
   transition: color 0.8s ease;
