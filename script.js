@@ -149,6 +149,23 @@ window.addEventListener('load', () => {
 //LOADER
 
 
+    const elemento1 = document.getElementById('frase');
+    const container2 = document.getElementById('container2');
+
+    elemento1.addEventListener('mouseenter', () => {
+        container2.classList.remove('container2');
+        container2.classList.add('trocar-bg');
+    });
+
+    elemento1.addEventListener('mouseleave', () => {
+        container2.classList.remove('trocar-bg');
+        container2.classList.add('container2');
+    });
+  
+
+
+
+//MUDAR BACKGROUND CONTAINER2
 
 
 

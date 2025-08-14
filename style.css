@@ -58,6 +58,11 @@ body{
 }
 
 
+.trocar-bg{
+  background-image: url('Assets/IMG/IMG_2010.JPG');
+}
+
+
  #loader {
     position: fixed;
     top: 0; left: 0;
@@ -279,8 +284,15 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     flex-direction: column;
-    background-image: url('Assets/IMG/montanhaDSK.JPG');
+    
+    position: absolute;
+    z-index: 999;
 }
+
+.container2{
+  background-image: url('Assets/IMG/IMG_2010\(1\).JPG');
+}
+
 
 #contDivBarraBranca {
     height: 20vh;
@@ -295,7 +307,8 @@ body{
 #barraBranca1 {
     height: 38%;
     width: 25%;
-    background-color: #040a05a6;
+  background-image: url('Assets/IMG/IMG_2010.JPG');
+  background-repeat: cover;
     transition: all 1s ease;
 }
 
@@ -306,7 +319,8 @@ body{
 #barraBranca2 {
     height: 38%;
     width: 70%;
-    background-color: #040a05a6;
+  background-image: url('Assets/IMG/IMG_2010.JPG');
+  background-repeat: cover;
     transition: all 1s ease;
 }
 
@@ -330,9 +344,8 @@ body{
 
 #contDivBarraFoto{
     height: 8vh;
-    background-image: url('Assets/IMG/montanhaDSK.JPG');
+  background-image: url('Assets/IMG/IMG_2010.JPG');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     opacity: 0.9;
     transition: opacity 0.5s ease;
@@ -367,7 +380,6 @@ body{
 #contComoFunciona{
     height: 100%;
     width: 72.5%;
-    background-color: #00000085;
     background-size: cover;
     background-position: center;
     display: grid;
@@ -403,9 +415,7 @@ body{
     height: 80%;
     width: 25%;
     display: flex;
-    background-color: #0000006f;
     background-size: cover;
-    background-position: center;
     margin-left: 2.5%;
     align-content: center;
     justify-content: center;
@@ -422,26 +432,6 @@ body{
      z-index: 1;
 }
 
-#sobreposicaoContainer2{
-z-index: 5;
-position: absolute;
-margin-top: 33vh;
-height: 100;
-width: 80vw;
-display: grid;
-align-self: center;
-justify-content: center;
-box-sizing: border-box;
-grid-template-columns: 33.3% 33.3% 33.3%;
-grid-template-rows:  33.3% 33.3% 33.3%;
-}
-
-#sobreposicaoContainer2 img{
-  grid-column: 2;
-  grid-row: 2;
-  width: 100%;
-  border-radius: 10px;
-}
 
 #titulocontDivBarra2{
     height: 100%;
