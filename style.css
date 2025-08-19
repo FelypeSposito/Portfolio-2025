@@ -8,7 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Playwrite+IN:wght@100..400&display=swap');
 
-
+.none{
+  display: none;
+  transition: all 2s ease;
+}
 
 
 * {
@@ -58,10 +61,25 @@ body{
 }
 
 
-.trocar-bg{
-  background-image: url('Assets/IMG/IMG_2010.JPG');
+.trocar-bgExposicao{
+  background-image: url('Assets/IMG/yagoExposicao.JPG');
 }
 
+.trocar-bgSombras{
+  background-image: url('Assets/IMG/yagoSombras.JPG');
+}
+
+.trocar-bgCor{
+  background-image: url('Assets/IMG/yagoCor.JPG');
+}
+
+.trocar-bgTextura{
+  background-image: url('Assets/IMG/yagoTextura.JPG');
+}
+
+.trocar-bgFinalizado{
+  background-image: url('Assets/IMG/yagoFinalizado.JPG');
+}
 
  #loader {
     position: fixed;
@@ -171,7 +189,7 @@ body{
 }
 
 /* Header */
-#navGeralHeader {
+.navGeralHeader {
     height: 15vh;
     background-color: #040a05c4;
     display: grid;
@@ -187,12 +205,12 @@ body{
     top: 0;
 }
 
-#navGeralHeader:hover{
+.navGeralHeader:hover{
   backdrop-filter: blur(7px);
     background-color: #040a05dd;
 }
 
-#navGeralHeader #imgGit {
+.navGeralHeader #imgGit {
     align-self: center;
     justify-self: center;
     text-decoration: none;
@@ -235,7 +253,7 @@ body{
     align-items: end;
     position: relative;
     z-index: 1;
-    background-image: url('Assets/IMG/laguinhoDeFora1xDSK.jpg');
+    background-image: url('Assets/IMG/cachoeira1.JPG');
     background-position: center;
     background-size: cover;
     filter: blur(6px);
@@ -277,21 +295,24 @@ body{
 
 /* Segundo container */
 #container2 {
-    height: 110vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     flex-direction: column;
+    transition: all 0.2s ease;
     
-    position: absolute;
-    z-index: 999;
 }
 
 .container2{
-  background-image: url('Assets/IMG/IMG_2010\(1\).JPG');
+  background-image: url('Assets/IMG/yagoOriginal.JPG');
 }
+
+/*
+
+BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 
 
 #contDivBarraBranca {
@@ -348,7 +369,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.9;
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #contDivBarraFoto:hover{
@@ -368,13 +389,24 @@ body{
     color: white;
 }
 
-#conteudoContainer2{
-    height: 40%;
+
+*/
+
+.conteudoContainer2{
+    height: 100%;
     width: 100%;
     display: flex;
-    margin-top: 5vh;
     position: relative;
     z-index: 1;
+    transition: all 2s ease;
+}
+
+.conteudoContainer2 ul{
+  transition: all 2s ease;
+}
+
+.conteudoContainer2 ul li{
+  transition: all 2s ease;
 }
 
 #contComoFunciona{
@@ -408,7 +440,7 @@ body{
     color: #D9D9D9;
     position: relative;
     z-index: 1;
-    margin-top: 5%;
+    margin-top: 7.5%;
 }
 
 #contGradeCor{
@@ -515,7 +547,10 @@ body{
     padding-left: 10%;
 }
 
-
+#barraSeparadora2px{
+  height: 2px;
+  background-color: rgb(75, 75, 75);
+}
 
 
 #comparadorOficial{
@@ -528,6 +563,7 @@ body{
     background-image: url('Assets/IMG/backgroundContainer1.JPG');
     background-position: center;
     background-size: cover;
+    align-self: flex-end;
 
 }
 
@@ -1636,7 +1672,7 @@ body{
     background-position: center;
   }
 
-  #conteudoContainer2{
+  .conteudoContainer2{
     display: flex;
     flex-wrap: wrap;
     height: 150vh;
@@ -1647,7 +1683,6 @@ body{
     width: 100vw;
     height: 40vh;
   }
-
 
 
   #listaComoFunciona ul li{

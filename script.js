@@ -150,22 +150,133 @@ window.addEventListener('load', () => {
 
 
     const elemento1 = document.getElementById('frase');
+    const elemento2 = document.getElementById('sombras');
+    const elemento3 = document.getElementById('cor');
+    const elemento4 = document.getElementById('textura');
+    const elemento5 = document.getElementById('curvaDeLuz');
     const container2 = document.getElementById('container2');
 
+
+//Mouse enter na frase exposição
+
     elemento1.addEventListener('mouseenter', () => {
-        container2.classList.remove('container2');
-        container2.classList.add('trocar-bg');
+
+        setTimeout(() => {
+  container2.classList.remove('container2');
+container2.classList.add('trocar-bgExposicao');
+titulocontDivBarra1.classList.add('display');
+}, 500);
+
+/*
+Adiciona a classe 'trocar-bg' ao container2 após 2 segundos,
+criando um elemento que troca o background do container2
+
+*/
     });
 
     elemento1.addEventListener('mouseleave', () => {
-        container2.classList.remove('trocar-bg');
+      setTimeout(() =>{
+        container2.classList.remove('trocar-bgExposicao');
         container2.classList.add('container2');
+        container2.classList.remove('trocar-bgFinalizado');
+      }, 200);
+      /* 
+      Remove a classe 'trocar-bg' após 2 segundos trocando,
+        o background removendo o que foi adicionado no mouse
+        enter
+        */
     });
   
 
+//Mouse enter na frase sombras
 
 
-//MUDAR BACKGROUND CONTAINER2
+    elemento2.addEventListener('mouseenter', () => {
+
+        setTimeout(() => {
+  container2.classList.remove('container2');
+container2.classList.add('trocar-bgSombras');
+}, 500);
+    });
+
+    elemento2.addEventListener('mouseleave', () => {
+      setTimeout(() =>{
+        container2.classList.remove('trocar-bgSombras');
+        container2.classList.add('container2');
+        container2.classList.remove('trocar-bgFinalizado');
+      }, 200);
+    });
+    
+
+    //Mouse enter na frase Cor
+
+
+    elemento3.addEventListener('mouseenter', () => {
+
+        setTimeout(() => {
+  container2.classList.remove('container2');
+container2.classList.add('trocar-bgCor');
+}, 500);
+    });
+
+    elemento3.addEventListener('mouseleave', () => {
+      setTimeout(() =>{
+        container2.classList.remove('trocar-bgCor');
+        container2.classList.add('container2');
+        container2.classList.remove('trocar-bgFinalizado');
+      }, 200);
+    });
+    
+
+    //Mouse enter na frase Textura
+
+
+    elemento4.addEventListener('mouseenter', () => {
+
+        setTimeout(() => {
+  container2.classList.remove('container2');
+container2.classList.add('trocar-bgTextura');
+}, 500);
+    });
+
+    elemento4.addEventListener('mouseleave', () => {
+      setTimeout(() =>{
+        container2.classList.remove('trocar-bgTextura');
+        container2.classList.remove('trocar-bgFinalizado');
+        container2.classList.add('container2');
+      }, 200);
+    });
+    
+
+        //Mouse enter na frase Finalizado
+//Elementos que vao excluidos com o mouseenter no ultimo elem
+
+const dispNon1 = document.getElementById('contDivBarraFoto')
+const dispNon2 = document.getElementById('barraBranca1')
+const dispNon3 = document.getElementById('barraBranca2')
+
+//Opacidade de certos elementos quando passar o mouse por 
+//cima do "Finalizado"
+
+
+//Elemento que vai ser apagado por alguns segundos e voltar
+const header1 = document.getElementById('navGeralHeader');
+
+
+    elemento5.addEventListener('mouseenter', () => {
+
+        setTimeout(() => {
+  container2.classList.remove('container2');
+container2.classList.add('trocar-bgFinalizado');
+dispNon1.classList.add('none');
+dispNon2.classList.add('none');
+dispNon3.classList.add('none');
+}, 500);
+
+    });
+
+    
+
 
 
 
