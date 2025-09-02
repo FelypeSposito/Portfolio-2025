@@ -308,6 +308,7 @@ body{
 
 .container2{
   background-image: url('Assets/IMG/yagoOriginal.JPG');
+  transition: 2s ease;
 }
 
 /*
