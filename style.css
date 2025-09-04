@@ -61,6 +61,10 @@ body{
 }
 
 
+.trocar-bgPadrao{
+  background-image: url('Assets/IMG/yagoOriginal.JPG');
+}
+
 .trocar-bgExposicao{
   background-image: url('Assets/IMG/yagoExposicao.JPG');
 }
@@ -253,7 +257,7 @@ body{
     align-items: end;
     position: relative;
     z-index: 1;
-    background-image: url('Assets/IMG/graffitiPredioDSK2.JPG');
+    background-image: url('Assets/IMG/gamaroSepDSK3.JPG');
     background-position-y: 15%;
     background-size: cover;
     filter: blur(6px);
@@ -436,6 +440,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 #contComoFunciona ul li{
     list-style: none;
     font-family: 'six caps';
+    letter-spacing: 0.25vw;
     font-style: normal;
     font-size: 2.5rem;
     color: #D9D9D9;
@@ -709,7 +714,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 #grow2C3{
   height: 100%;
   flex-basis: 15%;
-  background-image: url('Assets/IMG/RoofTopHorizontal.JPG');
+  background-image: url('Assets/IMG/cachoeiraFriaDSK.jpg');
   background-size: cover;
   background-position: center;
   transition: all 3s ease;
@@ -718,7 +723,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 #grow3C3{
   height: 100%;
   flex-basis: 12.5%;
-  background-image: url('Assets/IMG/avenidaMicrosoft2x.jpg');
+  background-image: url('Assets/IMG/ibira.jpg');
   background-size: cover;
   background-position: center;
   transition: all 3s ease;
@@ -727,7 +732,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 #grow4C3{
   height: 100%;
   flex-basis: 35%;
-  background-image: url('Assets/IMG/cachoeiraFriaDSK.jpg');
+  background-image: url('Assets/IMG/gamaroSepDSK4.JPG');
   background-size: cover;
   background-position: center;
   transition: flex-grow 2s ease, border-radius 1s ease;

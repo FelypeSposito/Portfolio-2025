@@ -68,7 +68,7 @@ sections.forEach(section => {
 });
 
 
-
+//COLORE QUANDO O CONTAINER ESTIVER 50% VISIVEL
 const targetsColor = document.querySelectorAll('.color-in-section');
 
 const colorObserver = new IntersectionObserver((entries) => {
@@ -79,37 +79,25 @@ const colorObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.20
+  threshold: 0.50
 });
 
 targetsColor.forEach(el => {
   colorObserver.observe(el);
 });
-
-
-
-
-const targets50 = document.querySelectorAll('.fade-in-section-50');
-
-const Observer50 = new IntersectionObserver((entries) => {
-  entries.forEach(item => {
-    if (item.isIntersecting) {
-      item.target.classList.add('blur-50');
-      Observer50.unobserve(item.target); // Só anima uma vez
-    }
-  });
-}, {
-  threshold: 0.30
-});
-
-targets50.forEach(el => {
-  Observer50.observe(el);
-});
+//
 
 
 
 
 
+
+
+
+
+
+
+//BLUR INICIAL - BORRÃO PÓS LOADER
  window.addEventListener('load', () => {
     setTimeout(() => {
       const el = document.getElementById('BGcont1');
@@ -177,13 +165,16 @@ criando um elemento que troca o background do container2
     elemento1.addEventListener('mouseleave', () => {
       setTimeout(() =>{
         container2.classList.remove('trocar-bgExposicao');
-        container2.classList.add('container2');
+        container2.classList.remove('trocar-bgSombras');
+        container2.classList.remove('trocar-bgCor');
+        container2.classList.remove('trocar-bgTextura');
         container2.classList.remove('trocar-bgFinalizado');
+        container2.classList.add('container2');
       }, 200);
       /* 
       Remove a classe 'trocar-bg' após 2 segundos trocando,
         o background removendo o que foi adicionado no mouse
-        enter
+        enter trocar-bgSombras
         */
     });
   
@@ -201,9 +192,12 @@ container2.classList.add('trocar-bgSombras');
 
     elemento2.addEventListener('mouseleave', () => {
       setTimeout(() =>{
+        container2.classList.remove('trocar-bgExposicao');
         container2.classList.remove('trocar-bgSombras');
-        container2.classList.add('container2');
+        container2.classList.remove('trocar-bgCor');
+        container2.classList.remove('trocar-bgTextura');
         container2.classList.remove('trocar-bgFinalizado');
+        container2.classList.add('container2');
       }, 200);
     });
     
@@ -221,9 +215,12 @@ container2.classList.add('trocar-bgCor');
 
     elemento3.addEventListener('mouseleave', () => {
       setTimeout(() =>{
+        container2.classList.remove('trocar-bgExposicao');
+        container2.classList.remove('trocar-bgSombras');
         container2.classList.remove('trocar-bgCor');
-        container2.classList.add('container2');
+        container2.classList.remove('trocar-bgTextura');
         container2.classList.remove('trocar-bgFinalizado');
+        container2.classList.add('container2');
       }, 200);
     });
     
@@ -241,6 +238,9 @@ container2.classList.add('trocar-bgTextura');
 
     elemento4.addEventListener('mouseleave', () => {
       setTimeout(() =>{
+        container2.classList.remove('trocar-bgExposicao');
+        container2.classList.remove('trocar-bgSombras');
+        container2.classList.remove('trocar-bgCor');
         container2.classList.remove('trocar-bgTextura');
         container2.classList.remove('trocar-bgFinalizado');
         container2.classList.add('container2');
