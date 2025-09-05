@@ -275,10 +275,50 @@ dispNon3.classList.add('none');
 
     });
 
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+const interativo = document.getElementById('interativo');
+const interativoDiv = document.getElementById('espacoInteracao')
+
+const IntObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const ratio = entry.intersectionRatio;
+
+    // Quando 40% visível ou mais, adiciona a classe 'teste'
+    if (ratio >= 0.4) {
+      espacoInteracao.classList.add('fundoBranco');
+      espacoInteracao.classList.remove('borda20px');
+      espacoInteracao.classList.add('borda50px');
+      espacoInteracao.classList.add('tamanhoONInteracao');
+      espacoInteracao.classList.remove('tamanhoInicialInteracao');
+      setTimeout(() => {
+        interativo.classList.remove('opacidade0');
+        interativo.classList.add('opacidade100');
+
+}, 500);
+
+//Comfortaa bebas neue 
+
+    }
+        if (ratio >= 0.6) {
+          setTimeout(() => {
+            setTimeout(() => {
+            espacoInteracao.classList.add('tamanhoInicialInteracao');
+            espacoInteracao.classList.remove('tituloInterativoON');
+            }, 2000);
+            espacoInteracao.classList.add('opacidade0');
+}, 3500);
+      
+    }
     
+  });
+}, {
+  threshold: Array.from({length:101}, (_,i)=>i/100)
+});
 
-
-
-
+// Observa o container que contém o interativo
+IntObserver.observe(document.getElementById('container2'));
 
 
