@@ -340,7 +340,7 @@ width: 15%;
     align-items: end;
     position: relative;
     z-index: 1;
-    background-image: url('Assets/IMG/gamaroSepDSK3.JPG');
+    background-image: url('Assets/IMG/montagemGamaroDSK.PNG');
     background-position-y: 15%;
     background-size: cover;
     filter: blur(6px);
@@ -805,7 +805,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 #grow3C3{
   height: 100%;
   flex-basis: 12.5%;
-  background-image: url('Assets/IMG/ibira.jpg');
+  background-image: url('Assets/IMG/graffitiPredioDSK2.JPG');
   background-size: cover;
   background-position: center;
   transition: all 3s ease;
