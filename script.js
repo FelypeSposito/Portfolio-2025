@@ -32,8 +32,10 @@
 
     item.addEventListener('mouseleave', () => {
       if (!isMobile) {
+        setTimeout(() => {
         wrapper.classList.remove('hovering');
         texto.removeAttribute('data-ativo');
+        }, 150);
       }
     });
 

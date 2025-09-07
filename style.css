@@ -641,18 +641,18 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 }
 
 
+
 #comparadorOficial{
-    height: 60vh;
+    height: 70vh;
     display: flex;
     background-size: cover;
     background-position: center;
     align-items: center;
     width: 100%;
-    background-image: url('Assets/IMG/backgroundContainer1.JPG');
+    background-image: url('Assets/IMG/bgGato.jpg');
     background-position: center;
     background-size: cover;
     align-self: flex-end;
-
 }
 
 #barraSeparadoraCont2p3{
@@ -721,9 +721,6 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   transition: all 0.7s ease;
 }
 
-#linha1Cnt1C3:hover{
-  width: 15%;
-}
 
 #linha1Cnt1C3 p{
   font-family: julius sans one, sans-serif;
@@ -745,9 +742,6 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   transition: all 0.7s ease;
 }
 
-#linha2Cnt1C3:hover{
-  width: 10%;
-}
 
 #linha2Cnt1C3 p{
   font-family: julius sans one, sans-serif;
@@ -892,9 +886,6 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   transition: all 0.7s ease;
 }
 
-#barraBranca3C3:hover{
-  width: 85%;
-}
 
 #barraBranca3C3:hover, #linha2Cnt1C3:hover, #linha1Cnt1C3:hover{
   background-color: #000000;
@@ -1453,6 +1444,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   display: flex;
   margin-left: 7.5%;
   margin-top: 1%;
+  box-sizing: border-box;
 }
 
 
@@ -1473,12 +1465,13 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   justify-content: center;
   background-color: #191B0E;
   align-self: center;
+  box-sizing: border-box;
 }
 
 #delimitacaoBotaoDSKBraveta p{
   color: #EEFFC1;
   font-family: six caps, sans-serif;
-  font-size: 2rem;
+  font-size: 1.8em;
 }
 
 #barraSeparadora{
@@ -1598,6 +1591,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
       align-items: flex-start;
       justify-content: center;
       margin-left: 2%;
+      transition: all 4s ease;
     }
 
     .container {
@@ -1655,7 +1649,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
     }
 
     .galeria-wrapper.hovering .container .item:hover {
-      opacity: 1;
+      opacity: 1; 
       pointer-events: auto;
       z-index: 5;
       max-width: 100%;
@@ -1677,32 +1671,36 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
       display: block;
     }
 
-    @media (max-width: 900px) {
-      .galeria-wrapper {
-        flex-direction: column;
-        align-items: center;
-      }
+  
 
-      .container, .texto-explicativo {
-        max-width: 100%;
-      }
-      #navHeader li{
-  font-size: 10px;
+@media (max-width: 900px) {
+  #BG1Container5{
+    width: 100%;
+  }
+
+  #divTextoWebDesign{
+    width: 100%;
+    display: flex;
+    padding: 5%;
+  }
+
+  #itensHeaderDSKBraveta div{
+    font-size: 1rem;
+  }
+
+  #opcoesFooter1 ul li a {
+    font-size: 2.5rem;
 }
 
-#comparadorOficial{
-  height: 200vh; /* Ajusta a altura para o conteúdo */
-  background-image: url('Assets/IMG/MOBILE_backgroundContainer1.jpeg');
+#logoFinalFooter a{
+font-size: 1.5rem;
 }
 
-#sobreposicaoContainer2{
-  display: none;
+#footer{
+  height: 50vh;
 }
 
-    }
-
-
-
+}
     
 
 @media (max-width: 900px) {
@@ -1710,13 +1708,60 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
     flex-direction: column;
     align-items: center;
   }
+      .texto-explicativo{
+        max-width: 70%;
+      }
 
-  .container, .texto-explicativo {
+  .container{
     max-width: 100%;
+    margin-right: 5%;
   }
 
-  .texto-explicativo {
-    display: none; /* Esconde o bloco lateral no mobile */
+  #conteudo3Container4{
+    display: none;
+  }
+
+  #conteudo1Container4{
+    display: none;
+  }
+
+  #conteudo2Container4{
+    grid-column-start: initial;
+    grid-column-end: initial;
+
+  }
+
+  #bg1Camada2Container4{
+    background-image: url('Assets/IMG/rioPB3.jpg');
+  }
+
+  #barrinha2{
+    background-image: url('Assets/IMG/RioPiraPB2.jpg');
+  }
+
+  #textoPrincipalContainer4{
+    font-size: 1.2em;
+  }
+
+  #textoDSKBraveta{
+    width: 90%;
+  }
+
+  #delimitacaoBotaoDSKBraveta p{
+    font-size: 1px;
+  }
+
+
+  #andar1WebDesign{
+    font-size: 3rem;
+  }
+  #andar2WebDesign{
+    font-size: 3rem;
+  }
+
+
+  #interativo{
+    font-size: 1em;
   }
 
   .item {
@@ -1740,10 +1785,130 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   .item.ativo .texto-sobreposta {
     display: block;
   }
+
+  #contPrincipalCont3{
+    box-sizing: border-box;
+    height: 90vh;
+  }
+
+  #containerGlowC3{
+    flex-direction: column-reverse;
+    height: 100%
+  }
+
+  #grow1C3:hover{
+  border-radius: 0%;
+  border-radius: 0% 0% 100px 100px;  
+  }
+
+  #grow4C3{
+    transition: all 4s ease;
+  }
+
+  #grow4C3:hover{
+    border-radius: 0%;
+  border-radius: 100px 100px 0% 0% ;
+  }
+
+  #barraBranca3C3{
+    display: none;
+  }
+
+  #subCont1C3{
+    display: none;
+  }
+
+  #contPrincipalCont3{
+    margin-top: 0;
+  }
+
+
+  #containerGlowC3{
+    height: 110vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+  }
+
+  #container3{
+    height: 120vh;
+  }
+
+  #delimitacaoBotaoDSKBraveta p{
+    font-size: 1.4rem;
+  }
+
+  #div1Footer{
+    padding-left: 5%;
+  }
+}
+
+@media (max-width: 1100px){
+  #conteudo1Container4{
+    height: 85%;
+    align-items: center;
+}
+
+#conteudo3Container4{
+  height: 85%;
+  grid-column-end: unset;
+}
+
+#linha3Container3{
+  width: 50%;
+}
+
+#barraBranca3C3{
+  width: 65%;
+}
+
+#linha1Cnt1C3{
+  width: 25%;
+}
+
+#divTextoWebDesign p{
+  font-size: 1.5rem;
+}
+
+#andar1WebDesign{
+  font-size: 3rem;
+}
+
+#andar2WebDesign{
+  font-size: 3rem;
+
+
+}
+}
+
+@media (max-width: 1200px){
+.galeria-wrapper{
+  display: grid;
+  transition: all 1s ease;
+}
+
+.hovering {
+  margin-bottom: 5%;
+  transition: all 2s ease;
+}
+
+.texto-explicativo{
+  transition: all 1s ease ;
 }
 
 
 
+}
+@media (max-width: 1300px) {
+
+  #delimitacaoBotaoDSKBraveta{
+    width: 17%;
+  }
+
+
+  #div1Footer{
+    padding-right: 5%;
+  }
+}
 
 @media (max-width: 300px) {
   .galeria-wrapper {
@@ -1797,20 +1962,6 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 
 
 
-  .container {
-    flex-direction: column; /* <-- FAZ FICAREM EM COLUNA */
-    gap: 30px;
-    max-width: 100%;
-    align-items: center;
-    height: 200vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    
-  }
-
-  .texto-explicativo {
-    display: none; /* Esconde o texto lateral no mobile */
-  }
 
   .item {
     width: 90%;
