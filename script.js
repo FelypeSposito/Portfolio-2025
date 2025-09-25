@@ -324,3 +324,9 @@ const IntObserver = new IntersectionObserver((entries) => {
 IntObserver.observe(document.getElementById('container2'));
 
 
+const menuToggle = document.getElementById("menuToggle");
+const navHeader = document.getElementById("navHeader");
+
+menuToggle.addEventListener("click", () => {
+  navHeader.classList.toggle("active");
+});

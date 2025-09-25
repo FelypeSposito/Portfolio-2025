@@ -1701,6 +1701,77 @@ font-size: 1.5rem;
 }
 
 }
+
+
+@media (max-width: 775px){
+
+}
+
+.navGeralHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#navHeader {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+#navHeader li {
+  list-style: none;
+}
+
+#navHeader a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Botão toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsividade: abaixo de 768px */
+@media (max-width: 768px) {
+  #navHeader {
+    display: none; /* escondido por padrão */
+    flex-direction: column;
+    gap: 15px;
+    background: #830000af;
+    position: absolute;
+    top: 75px;
+    left: 12px;
+    border-radius: 10px 0px 10px 10px;
+    height: 200px;
+    width: 200px;
+    align-content: start;
+    justify-content: start;
+    padding-top: 25px;
+    padding-left: 25px;
+    transition: all 0.5s ease;
+  }
+
+  #navGeralHeader{
+    margin: 5%;
+  }
+
+  #navHeader.active {
+    display: flex; /* aparece quando ativo */
+  }
+
+  .menu-toggle {
+    display: block; /* botão aparece */
+  }
+}
+
     
 
 @media (max-width: 900px) {
