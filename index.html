@@ -41,21 +41,44 @@
 </div>
 </div> 
 
-<div class="navGeralHeader">
 
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" id="menuCheckbox" />
 
-  <!-- Botão Toggle -->
-  <button class="menu-toggle" id="menuToggle">☰</button>
+    <span></span>
+    <span></span>
+    <span></span>
 
-  <!-- Menu -->
-  <div id="navHeader">
-    <li><a href="#filtroEscuroBG">Projetos</a></li>
-    <li><a href="#BGcontainer5">Design</a></li>
-    <li><a href="#barraSeparadoraCont3p4">Fotografia</a></li>
-    <li><a href="#container4">Metodologia</a></li> 
+    <ul id="menu">
+      <li>
+        <a href="#">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">Inicio</label>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">Fotografia</label>
+        </a>
+      </li>
+      <li><label for="menuCheckbox"><a>Projetos</a></label></li>
+            <li>
+        <a href="#">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">Web Design</label>
+        </a>
+      </li>
+                  <li>
+        <a href="#">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">GitHub</label>
+        </a>
+      </li>
+    </ul>
   </div>
 
-</div>
+  <!-- Overlay -->
+  <div id="overlay"></div>
+</nav>
+
 
 <!--F Meu nome da tela inicial-->
 <div class="barraSeparadora">
@@ -65,31 +88,10 @@
       <div id="espacoInteracao" class="textoInteracao tamanhoInicialInteracao borda20px">
         <div id="interativo" class="tituloInterativo tituloInterativoInicial opacidade0">Sessão Interativa!</div>
       </div>
-      <!-- 
 
-      <div id="contDivBarraBranca">
-
-            <div id="barraBranca1">
-            </div>
-
-            <div id="barraBranca2">
-                <div id="tituloBarraBranca1">
-                    <p>Tratamento de cores</p>
-                </div>
-            </div>
-                </div>
-
-            <div id="contDivBarraFoto">
-                <div id="titulocontDivBarra1">
-                    <p>
-                        Oque altera na foto?
-                    </p>
-            </div>
-            </div>
             
-            -->
 
-<div class="conteudoContainer2">
+<div class="">
 
     <div id="contComoFunciona">
         <div id="listaComoFunciona">
