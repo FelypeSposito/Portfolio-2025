@@ -138,117 +138,73 @@ window.addEventListener('load', () => {
 
 //LOADER
 
+const elemento1 = document.getElementById('frase');
+const elemento2 = document.getElementById('sombras');
+const elemento3 = document.getElementById('cor');
+const elemento4 = document.getElementById('textura');
+const elemento5 = document.getElementById('curvaDeLuz');
+const container2 = document.getElementById('container2');
 
-    const elemento1 = document.getElementById('frase');
-    const elemento2 = document.getElementById('sombras');
-    const elemento3 = document.getElementById('cor');
-    const elemento4 = document.getElementById('textura');
-    const elemento5 = document.getElementById('curvaDeLuz');
-    const container2 = document.getElementById('container2');
+// função auxiliar para limpar classes
+function resetBackground() {
+  container2.classList.remove(
+    'trocar-bgExposicao',
+    'trocar-bgSombras',
+    'trocar-bgCor',
+    'trocar-bgTextura',
+    'trocar-bgFinalizado'
+  );
+  container2.classList.add('container2');
+}
 
+// função que ativa determinada classe
+function ativarClasse(classe) {
+  resetBackground();
+  setTimeout(() => {
+    container2.classList.remove('container2');
+    container2.classList.add(classe);
+  }, 500);
+}
 
-//Mouse enter na frase exposição
+/* ---------------------------
+   Eventos para desktop (hover)
+---------------------------- */
+elemento1.addEventListener('mouseenter', () => ativarClasse('trocar-bgExposicao'));
+elemento1.addEventListener('mouseleave', resetBackground);
 
-    elemento1.addEventListener('mouseenter', () => {
+elemento2.addEventListener('mouseenter', () => ativarClasse('trocar-bgSombras'));
+elemento2.addEventListener('mouseleave', resetBackground);
 
-        setTimeout(() => {
-  container2.classList.remove('container2');
-container2.classList.add('trocar-bgExposicao');
-titulocontDivBarra1.classList.add('display');
-}, 500);
+elemento3.addEventListener('mouseenter', () => ativarClasse('trocar-bgCor'));
+elemento3.addEventListener('mouseleave', resetBackground);
 
-/*
-Adiciona a classe 'trocar-bg' ao container2 após 2 segundos,
-criando um elemento que troca o background do container2
+elemento4.addEventListener('mouseenter', () => ativarClasse('trocar-bgTextura'));
+elemento4.addEventListener('mouseleave', resetBackground);
 
-*/
-    });
+/* ---------------------------
+   Eventos para mobile (toque)
+---------------------------- */
+[elemento1, elemento2, elemento3, elemento4].forEach((el) => {
+  el.addEventListener('click', () => {
+    if (el === elemento1) ativarClasse('trocar-bgExposicao');
+    if (el === elemento2) ativarClasse('trocar-bgSombras');
+    if (el === elemento3) ativarClasse('trocar-bgCor');
+    if (el === elemento4) ativarClasse('trocar-bgTextura');
+  });
+});
 
-    elemento1.addEventListener('mouseleave', () => {
-      setTimeout(() =>{
-        container2.classList.remove('trocar-bgExposicao');
-        container2.classList.remove('trocar-bgSombras');
-        container2.classList.remove('trocar-bgCor');
-        container2.classList.remove('trocar-bgTextura');
-        container2.classList.remove('trocar-bgFinalizado');
-        container2.classList.add('container2');
-      }, 200);
-      /* 
-      Remove a classe 'trocar-bg' após 2 segundos trocando,
-        o background removendo o que foi adicionado no mouse
-        enter trocar-bgSombras
-        */
-    });
-  
+// se clicar fora dos elementos, reseta
+document.addEventListener('click', (e) => {
+  if (
+    !e.target.closest('#frase') &&
+    !e.target.closest('#sombras') &&
+    !e.target.closest('#cor') &&
+    !e.target.closest('#textura')
+  ) {
+    resetBackground();
+  }
+});
 
-//Mouse enter na frase sombras
-
-
-    elemento2.addEventListener('mouseenter', () => {
-
-        setTimeout(() => {
-  container2.classList.remove('container2');
-container2.classList.add('trocar-bgSombras');
-}, 500);
-    });
-
-    elemento2.addEventListener('mouseleave', () => {
-      setTimeout(() =>{
-        container2.classList.remove('trocar-bgExposicao');
-        container2.classList.remove('trocar-bgSombras');
-        container2.classList.remove('trocar-bgCor');
-        container2.classList.remove('trocar-bgTextura');
-        container2.classList.remove('trocar-bgFinalizado');
-        container2.classList.add('container2');
-      }, 200);
-    });
-    
-
-    //Mouse enter na frase Cor
-
-
-    elemento3.addEventListener('mouseenter', () => {
-
-        setTimeout(() => {
-  container2.classList.remove('container2');
-container2.classList.add('trocar-bgCor');
-}, 500);
-    });
-
-    elemento3.addEventListener('mouseleave', () => {
-      setTimeout(() =>{
-        container2.classList.remove('trocar-bgExposicao');
-        container2.classList.remove('trocar-bgSombras');
-        container2.classList.remove('trocar-bgCor');
-        container2.classList.remove('trocar-bgTextura');
-        container2.classList.remove('trocar-bgFinalizado');
-        container2.classList.add('container2');
-      }, 200);
-    });
-    
-
-    //Mouse enter na frase Textura
-
-
-    elemento4.addEventListener('mouseenter', () => {
-
-        setTimeout(() => {
-  container2.classList.remove('container2');
-container2.classList.add('trocar-bgTextura');
-}, 500);
-    });
-
-    elemento4.addEventListener('mouseleave', () => {
-      setTimeout(() =>{
-        container2.classList.remove('trocar-bgExposicao');
-        container2.classList.remove('trocar-bgSombras');
-        container2.classList.remove('trocar-bgCor');
-        container2.classList.remove('trocar-bgTextura');
-        container2.classList.remove('trocar-bgFinalizado');
-        container2.classList.add('container2');
-      }, 200);
-    });
-    
 
         //Mouse enter na frase Finalizado
 //Elementos que vao excluidos com o mouseenter no ultimo elem
@@ -330,3 +286,12 @@ const navHeader = document.getElementById("navHeader");
 menuToggle.addEventListener("click", () => {
   navHeader.classList.toggle("active");
 });
+
+
+
+
+
+
+
+// ANIMACAO ONCLICK 
+
