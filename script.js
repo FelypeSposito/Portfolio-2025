@@ -1,55 +1,74 @@
   const wrapper = document.getElementById('galeriaWrapper');
-  const galeria = document.getElementById('galeria');
-  const texto = document.getElementById('texto');
-  const items = galeria.querySelectorAll('.item');
+const galeria = document.getElementById('galeria');
+const texto = document.getElementById('texto');
+const items = galeria.querySelectorAll('.item');
 
-  const textos = {
-    1: 'Imagem RAW',
-    2: 'Imagem Tratada',
-    3: 'Imagem RAW',
-    4: 'Imagem Tratada',
-  };
+const textos = {
+  1: 'Imagem RAW',
+  2: 'Imagem Tratada',
+  3: 'Imagem RAW',
+  4: 'Imagem Tratada',
+};
 
-  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+const isMobile = window.matchMedia("(max-width: 900px)").matches;
 
-  items.forEach(item => {
-    const id = item.getAttribute('data-id');
+items.forEach(item => {
+  const id = item.getAttribute('data-id');
 
-    if (isMobile) {
-      const textoSobreposto = document.createElement('div');
-      textoSobreposto.className = 'texto-sobreposta';
-      textoSobreposto.textContent = textos[id];
-      item.appendChild(textoSobreposto);
+  // Cria texto sobreposto no mobile
+  if (isMobile) {
+    const textoSobreposto = document.createElement('div');
+    textoSobreposto.className = 'texto-sobreposta';
+    textoSobreposto.textContent = textos[id];
+    item.appendChild(textoSobreposto);
+  }
+
+  // Hover (desktop)
+  item.addEventListener('mouseenter', () => {
+    if (!isMobile) {
+      wrapper.classList.add('hovering');
+      texto.setAttribute('data-ativo', id);
     }
+  });
 
-    // Hover para desktop
-    item.addEventListener('mouseenter', () => {
-      if (!isMobile) {
-        wrapper.classList.add('hovering');
-        texto.setAttribute('data-ativo', id);
-      }
-    });
-
-    item.addEventListener('mouseleave', () => {
-      if (!isMobile) {
-        setTimeout(() => {
+  item.addEventListener('mouseleave', () => {
+    if (!isMobile) {
+      setTimeout(() => {
         wrapper.classList.remove('hovering');
         texto.removeAttribute('data-ativo');
-        }, 150);
-      }
-    });
-
-    // Clique para mobile
-    item.addEventListener('click', () => {
-      if (isMobile) {
-        const isActive = item.classList.contains('ativo');
-        items.forEach(i => i.classList.remove('ativo'));
-        if (!isActive) {
-          item.classList.add('ativo');
-        }
-      }
-    });
+      }, 150);
+    }
   });
+
+  // Clique (mobile)
+  if (isMobile) {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation(); // evita conflito
+      const isActive = item.classList.contains('ativo');
+      items.forEach(i => i.classList.remove('ativo'));
+      
+      if (!isActive) {
+        item.classList.add('ativo');
+        wrapper.classList.add('hovering');
+        texto.setAttribute('data-ativo', id);
+      } else {
+        wrapper.classList.remove('hovering');
+        texto.removeAttribute('data-ativo');
+      }
+    });
+  }
+});
+
+// Fechar descrição ao clicar fora (mobile)
+if (isMobile) {
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.item')) {
+      items.forEach(i => i.classList.remove('ativo'));
+      wrapper.classList.remove('hovering');
+      texto.removeAttribute('data-ativo');
+    }
+  });
+}
 
 
   const sections = document.querySelectorAll('.fade-in-section');
@@ -288,10 +307,36 @@ menuToggle.addEventListener("click", () => {
 });
 
 
+// ANIMACAO ONCLICK PORTEFOLIO MOBILE
 
 
 
+// variável renomeada para não conflitar
+const isMobileC3 = window.matchMedia("(max-width: 900px)").matches;
 
+const grow1 = document.getElementById('grow1C3');
+const grow4 = document.getElementById('grow4C3');
 
-// ANIMACAO ONCLICK 
+// função auxiliar para adicionar/remover classe de hover simulada
+function toggleHover(el) {
+  const isActive = el.classList.contains('hovered');
+  el.classList.remove('hovered'); // remove de todos
+  if (!isActive) el.classList.add('hovered'); // adiciona só no clicado
+}
 
+// Desktop → mantém hover natural
+// Mobile → click simula hover
+if (isMobileC3) {
+  [grow1, grow4].forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleHover(el);
+    });
+  });
+
+  // clicar fora remove hover
+  document.addEventListener('click', () => {
+    grow1.classList.remove('hovered');
+    grow4.classList.remove('hovered');
+  });
+}

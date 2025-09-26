@@ -192,16 +192,18 @@ align-self: center;
 align-items: center;
 justify-content: center;
 margin-top: 5%;
+margin-bottom: 5%;
 }
 
 .tamanhoInicialInteracao{
   height: 60px;
-  width: 60px;
+  width: 200px;
 }
+
 
 .tamanhoONInteracao{
 height: 60px;
-width: 15%;
+width: 25%;
 }
 
 .tituloInterativo{
@@ -1000,6 +1002,25 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   justify-content: center;
 }
 
+/* hover desktop */
+#grow1C3:hover {
+  border-radius: 0% 0% 100px 100px;  
+}
+
+#grow4C3:hover {
+  border-radius: 100px 100px 0% 0% ;
+}
+
+/* simula hover no mobile */
+#grow1C3.hovered {
+  border-radius: 0% 0% 100px 100px;
+}
+
+#grow4C3.hovered {
+  border-radius: 100px 100px 0% 0%;
+}
+
+
 
 
 #linha3Container3{
@@ -1658,7 +1679,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
 }
 
 #div2Footer {
-  width: 30%;
+  margin-top: 5vh;
 }
 
 #div3Footer {
@@ -1686,6 +1707,7 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   align-items: end;
   padding-bottom: 10%;
   justify-content: center;
+  align-content: center;
   height: 100%;
 }
 
@@ -1799,19 +1821,83 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
     .texto-explicativo[data-ativo="4"] #texto4 {
       display: block;
     }
+    
+.galeria-wrapper.hovering .container .item {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  border-radius: 10%;
+}
 
+.galeria-wrapper.hovering .container .item:hover {
+  opacity: 1; 
+  pointer-events: auto;
+  z-index: 5;
+  max-width: 100%;
+  aspect-ratio: 3 / 3;
+}
+    @media (min-width: 725px){
+   #comparadorMobile{
+    display: none;
+   }
 
     @media (max-width: 900px) {
       .gooey{
         margin-top: 5%;
       }
+
+      #container2{
+        gap: 15%;
+      }
+
+
     }
 
 
+
+    }
+
     @media (max-width: 725px) {
+
+      #comparadorMobile{
+        height: 100%;
+        width: 100%;
+        display: block;
+        color: white;
+        display: grid;
+        grid-template-rows: 6.25% 20% 2.5% 20% 2.5% 20% 2.5% 20% 6.25%;
+      }
+
+      #textoPrincipalContainer4 h1{
+        font-size: 2em;
+        padding: 2%;
+      }
+
+      #conteudoFooter{
+        backdrop-filter: blur(4px);
+      }
+
+      #div1Footer div ul li a{
+        font-size: 3rem;
+      }
+
+      #textoPrincipalContainer4 p{
+        font-size: 1.4em;
+        padding: 2%;
+      }
+      
       .gooey{
         margin-top: 15%;
       }
+
+      #comparadorOficial{
+        height: 40vh;
+      }
+
+      .galeria-container{
+        display: none;
+      }
+
     }
 
     @media (max-width: 550px) {
@@ -2189,8 +2275,6 @@ font-size: 1.5rem;
 
 @media (max-width: 1200px){
 .galeria-wrapper{
-  display: grid;
-  transition: all 1s ease;
 }
 
 .hovering {
