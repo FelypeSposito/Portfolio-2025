@@ -340,3 +340,17 @@ if (isMobileC3) {
     grow4.classList.remove('hovered');
   });
 }
+
+
+// Detecta mobile
+if (window.matchMedia("(max-width: 900px)").matches) {
+  function setMobileHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  // Atualiza ao carregar e redimensionar
+  window.addEventListener('resize', setMobileHeight);
+  window.addEventListener('orientationchange', setMobileHeight);
+  setMobileHeight();
+}

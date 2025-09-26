@@ -2372,3 +2372,7 @@ font-size: 1.5rem;
   }
 }
 
+/* Apenas altere a altura do container principal */
+#body, html {
+  height: calc(var(--vh, 1vh) * 100);
+}
