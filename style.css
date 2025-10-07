@@ -2202,7 +2202,7 @@ font-size: 1.5rem;
 
   #grow1C3:hover{
   border-radius: 0%;
-  border-radius: 0% 0% 100px 100px;  
+  border-radius: 0% 0% 50px 50px;  
   }
 
   #grow4C3{
@@ -2211,7 +2211,7 @@ font-size: 1.5rem;
 
   #grow4C3:hover{
     border-radius: 0%;
-  border-radius: 100px 100px 0% 0% ;
+  border-radius: 50px 50px 0% 0% ;
   }
 
   #barraBranca3C3{
