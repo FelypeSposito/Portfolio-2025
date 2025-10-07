@@ -28,6 +28,14 @@ body{
   background-color: #040a05c4 ;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #040a05c4;
+  overflow-x: hidden;
+}
+
 
 * {
   scroll-behavior: smooth;
