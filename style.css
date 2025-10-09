@@ -380,6 +380,8 @@ width: 25%;
     opacity: 0;
   }
 
+
+
   .gooey {
     width: 142px;
     height: 40px;
@@ -1837,6 +1839,8 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
         margin-top: 5%;
       }
 
+
+
       #container2{
         gap: 15%;
       }
@@ -1849,6 +1853,29 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
     }
 
     @media (max-width: 725px) {
+
+      .gooey{
+    width: 142px;
+    height: 40px;
+    position: relative;
+    margin-top: 0;
+      }
+
+        .gooey .dots span {
+    display: block;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin-left: 16px;
+    filter: blur(4px);
+    background: #ffffff;
+    border-radius: 50%;
+  }
+
+    .gooey .dot {
+    width: 14px;
+    height: 14px;
+    }
 
       #textoLoader{
         font-size: 2em;
@@ -2295,12 +2322,10 @@ font-size: 1.5rem;
   transition: all 1s ease ;
 }
 
-
-
 }
+
+
 @media (max-width: 1300px) {
-
-
 
   #div1Footer{
     padding-right: 5%;
