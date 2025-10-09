@@ -1010,23 +1010,6 @@ BARRAS REMOVIDAS DO CONTAINER 2 (DESCRIÇÃO DO CONT)
   justify-content: center;
 }
 
-/* hover desktop */
-#grow1C3:hover {
-  border-radius: 0% 0% 100px 100px;  
-}
-
-#grow4C3:hover {
-  border-radius: 100px 100px 0% 0% ;
-}
-
-/* simula hover no mobile */
-#grow1C3.hovered {
-  border-radius: 0% 0% 100px 100px;
-}
-
-#grow4C3.hovered {
-  border-radius: 100px 100px 0% 0%;
-}
 
 
 
